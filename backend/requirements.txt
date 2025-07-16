@@ -1,0 +1,5 @@
+Flask==2.3.2
+boto3
+kafka-python
+aws-lambda-powertools
+numpy 
