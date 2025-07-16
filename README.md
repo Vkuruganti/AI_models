@@ -1,21 +1,50 @@
 # Self-Optimizing Kubernetes Advisor
 
+## Table of Contents
+1. [Overview](#1-overview)
+2. [How This App Helps Platform and Infrastructure Teams](#2-how-this-app-helps-platform-and-infrastructure-teams)
+3. [Technical Details: How the Application Works](#3-technical-details-how-the-application-works)
+4. [Architecture and Components](#4-architecture-and-components)
+5. [Local Development & Demo](#5-local-development--demo)
+6. [Production Deployment (AWS)](#6-production-deployment-aws)
+7. [Reconfiguration](#7-reconfiguration)
+8. [Additional Resources](#8-additional-resources)
+
+---
+
 ## 1. Overview
 
-The Self-Optimizing Kubernetes Advisor helps platform engineering teams and SREs right-size workloads and optimize Kubernetes clusters. It continuously analyzes telemetry data (from Prometheus and kube-state-metrics) and provides actionable optimization suggestions, such as autoscaling recommendations, QoS class adjustments, and cost-saving opportunities. The system can optionally perform autonomous remediation, making it FinOps-native and reducing manual intervention.
+The Self-Optimizing Kubernetes Advisor is an intelligent platform designed to help platform engineering and infrastructure teams right-size workloads, optimize Kubernetes clusters, and control cloud costs. It continuously analyzes telemetry data (from Prometheus and kube-state-metrics) and provides actionable, data-driven recommendations for autoscaling, resource allocation, QoS class adjustments, and more. The system can optionally perform autonomous remediation, making it FinOps-native and reducing manual intervention.
 
 ---
 
 ## 2. How This App Helps Platform and Infrastructure Teams
 
-The Self-Optimizing Kubernetes Advisor empowers platform and infrastructure teams to achieve operational excellence in their Kubernetes environments. By continuously analyzing real-time telemetry from Prometheus and kube-state-metrics, the app provides actionable, data-driven recommendations for right-sizing workloads, optimizing resource allocation, and reducing cloud costs.
+The Self-Optimizing Kubernetes Advisor is a powerful tool for platform and infrastructure teams, delivering value in several key areas:
 
-**Key benefits:**
-- **Proactive Optimization:** Detects over- and under-provisioned workloads, recommends autoscaling, and suggests optimal QoS classes.
-- **Cost Efficiency:** Provides FinOps-native insights into resource usage and cost impact.
-- **Operational Visibility:** Unified dashboard for cluster health, resource utilization, and optimization opportunities.
-- **Autonomous Remediation (Optional):** Can automatically apply safe optimizations, reducing manual toil.
-- **Easy Integration:** Fits seamlessly into existing Kubernetes and cloud-native workflows.
+- **Proactive Optimization:**
+  - Continuously monitors resource usage and cluster health, identifying over- and under-provisioned workloads before they become a problem.
+  - Recommends right-sizing, autoscaling, and QoS class changes to ensure workloads are always running efficiently.
+
+- **Automation and Reduced Toil:**
+  - Automates the collection and analysis of telemetry data, eliminating the need for manual monitoring and spreadsheet-based resource reviews.
+  - (Optional) Autonomous remediation can apply safe optimizations automatically, freeing engineers to focus on higher-value work.
+
+- **Cost Control and FinOps:**
+  - Provides clear, actionable insights into resource usage and cost impact, enabling teams to make informed decisions that reduce waste and control cloud spend.
+  - Estimates the cost impact of recommendations, supporting budgeting and forecasting efforts.
+
+- **Operational Visibility and Governance:**
+  - Offers a unified dashboard for cluster health, resource utilization, and optimization opportunities, making it easy to spot issues and track improvements over time.
+  - Supports auditability and compliance by documenting recommendations and actions taken.
+
+- **Accelerated Troubleshooting and Incident Response:**
+  - Quickly surfaces anomalies and inefficiencies, helping teams respond to incidents faster and with more context.
+
+- **Seamless Integration:**
+  - Designed to fit into existing Kubernetes and cloud-native workflows, with flexible deployment options for both demo and production environments.
+
+By leveraging this advisor, platform and infrastructure teams can ensure their Kubernetes clusters are always running efficiently, cost-effectively, and in alignment with business and compliance goals—without the need for constant manual tuning.
 
 ---
 
@@ -74,7 +103,6 @@ The Self-Optimizing Kubernetes Advisor empowers platform and infrastructure team
 
 ---
 
-## 4. Architecture and Components
 
 ### 4.1 High-Level Architecture
 
