@@ -103,7 +103,6 @@ By leveraging this advisor, platform and infrastructure teams can ensure their K
 
 ---
 
-## 4. Architecture and Components
 
 ### 4.1 High-Level Architecture
 
