@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kubernetes Advisor Demo UI</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f9fa;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      padding: 32px;
+    }
+    h1 {
+      color: #2d3a4a;
+      margin-bottom: 24px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+    }
+    th, td {
+      padding: 12px 10px;
+      border-bottom: 1px solid #e0e6ed;
+      text-align: left;
+    }
+    th {
+      background: #f0f4f8;
+      color: #2d3a4a;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    .suggestion {
+      color: #1976d2;
+      font-weight: bold;
+    }
+    .type {
+      font-size: 0.95em;
+      color: #555;
+      background: #e3eafc;
+      border-radius: 4px;
+      padding: 2px 8px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Kubernetes Advisor Recommendations</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Pod</th>
+          <th>Type</th>
+          <th>Suggestion</th>
+          <th>CPU Usage</th>
+          <th>CPU Limit</th>
+          <th>QoS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>web-1</td>
+          <td><span class="type">over-provisioned</span></td>
+          <td class="suggestion">Reduce CPU limit</td>
+          <td>0.10</td>
+          <td>1.00</td>
+          <td>Burstable</td>
+        </tr>
+        <tr>
+          <td>api-1</td>
+          <td><span class="type">under-provisioned</span></td>
+          <td class="suggestion">Increase CPU limit or enable autoscaling</td>
+          <td>0.95</td>
+          <td>1.00</td>
+          <td>Burstable</td>
+        </tr>
+        <tr>
+          <td>worker-2</td>
+          <td><span class="type">spiky-usage</span></td>
+          <td class="suggestion">Enable HPA (Horizontal Pod Autoscaler)</td>
+          <td>0.80</td>
+          <td>1.00</td>
+          <td>Burstable</td>
+        </tr>
+        <tr>
+          <td>cache-1</td>
+          <td><span class="type">qos</span></td>
+          <td class="suggestion">Consider Burstable or Guaranteed QoS class</td>
+          <td>0.50</td>
+          <td>1.00</td>
+          <td>BestEffort</td>
+        </tr>
+        <tr>
+          <td>db-1</td>
+          <td><span class="type">cost</span></td>
+          <td class="suggestion">Estimated monthly cost: $30.00</td>
+          <td>0.50</td>
+          <td>2.00</td>
+          <td>Guaranteed</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html> 
